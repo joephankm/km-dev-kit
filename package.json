@@ -2,8 +2,24 @@
   "name": "km-dev-kit",
   "version": "1.0.0",
   "description": "KM Development toolkit",
+  "scripts": {
+    "check": "tsc --noEmit && eslint . && prettier --write ."
+  },
   "keywords": [],
   "author": "Minh Phan",
   "license": "ISC",
-  "packageManager": "pnpm@11.3.0"
+  "packageManager": "pnpm@11.8.0",
+  "dependencies": {
+    "tsx": "^4.22.4"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^25.9.4",
+    "eslint": "^10.5.0",
+    "eslint-config-prettier": "^10.1.8",
+    "globals": "^17.7.0",
+    "prettier": "^3.9.0",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.62.0"
+  }
 }
