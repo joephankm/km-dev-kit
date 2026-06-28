@@ -1,0 +1,9 @@
+{
+  "name": "km-dev-kit",
+  "version": "1.0.0",
+  "description": "KM Development toolkit",
+  "keywords": [],
+  "author": "Minh Phan",
+  "license": "ISC",
+  "packageManager": "pnpm@11.3.0"
+}
