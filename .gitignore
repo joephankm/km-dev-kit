@@ -19,7 +19,7 @@ logs/
 *.local.*
 
 # Claude Code local settings (machine-specific permissions)
-.claude/settings.local.json
+.claude
 
 # Active staging area for soft-link workflow (machine-local, never pushed)
 /active/
