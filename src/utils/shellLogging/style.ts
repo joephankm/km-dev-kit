@@ -1,11 +1,11 @@
 // Utility for styling text in terminal output using ANSI escape codes.
 
-import { styleCode } from './settings';
+import { styleCode } from './constants/style';
 
 /**
  * Semantic text styles for terminal output.
  */
-export default {
+const style = {
   error: wrapCode(styleCode.error),
   success: wrapCode(styleCode.success),
   warning: wrapCode(styleCode.warning),
@@ -14,8 +14,11 @@ export default {
   muted: wrapCode(styleCode.muted),
   debug: wrapCode(styleCode.debug),
   border: wrapCode(styleCode.border),
-  bold: wrapCode(styleCode.bold),
+  title: wrapCode(styleCode.title),
+  label: wrapCode(styleCode.label),
 };
+
+export type Style = keyof typeof style;
 
 /**
  * Wraps text with an ANSI escape code and resets styling after.
@@ -25,3 +28,5 @@ export default {
 function wrapCode(code: string) {
   return (text: string) => `${code}${text}${styleCode.reset}`;
 }
+
+export default style;

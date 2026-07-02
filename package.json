@@ -1,9 +1,10 @@
 {
   "name": "km-dev-kit",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "KM Development toolkit",
   "scripts": {
-    "check": "tsc --noEmit && eslint . && prettier --write ."
+    "check": "tsc --noEmit && eslint . && prettier --write .",
+    "server:info": "tsx scripts/system/serverInfo.ts"
   },
   "keywords": [],
   "author": "Minh Phan",

@@ -1,16 +1,14 @@
-// Configuration for shellLogging utilities.
-
 /**
- * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * 📐 Style Rules (ANSI Escape Sequences)
- * -------------------------------------------------------------------------------------------------
+ * ------------------------------------------------------------------------------------------------
  * Escape Sequences Example:
  *   \033[1;31m   =>   <\033> <[> <1;31> <m>
  *
  *   <\033> : Escape Code prefixed (`ESC`, ANSI value 27)
  *              - Octal: \033
  *              - Hexadecimal: \x1b
- *              - Unicode: \u001b
+ *              - Unicode: 
  *   <[>    : Control Sequence Introducer SCI
  *   <1;31> : Font Style, Font Color and Background Color, separate by ;, can have many styles, 1
  *            color and 1 background
@@ -43,6 +41,9 @@
  *  ╠═══════════════╧══════════╪════════════╣
  *  ║ RESET ALL                │          0 ║
  *  ╚══════════════════════════╧════════════╝
+ *
+ * @see https://gist.github.com/JBlond/2fea43a3049b38287e5e9cefc87b2124
+ * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 
 export const styleCode = {
@@ -54,33 +55,7 @@ export const styleCode = {
   highlight: '\x1b[36m', // cyan
   muted: '\x1b[90m', // gray
   debug: '\x1b[35m', // magenta
-  border: '\x1b[34m', // gray
-  bold: '\x1b[1m',
-};
-
-/**
- *   ┌─┬──┐  ┏━┳━━┓  ╔═╦══╗  ╓─╥──╖  ╒═╤══╕
- *   │ │  │  ┃ ┃  ┃  ║ ║  ║  ║ ║  ║  │ │  │
- *   ├─┼──┤  ┣━╋━━┫  ╠═╬══╣  ╟─╫──╢  ╞═╪══╡
- *   └─┴──┘  ┗━┻━━┛  ╚═╩══╝  ╙─╨──╜  ╘═╧══╛
- */
-
-export const boxChars = {
-  // Corners
-  topLeft: '╔',
-  topRight: '╗',
-  botLeft: '╚',
-  botRight: '╝',
-
-  // Junctions
-  topJoin: '╤', // top column separator
-  midLeft: '╠', // left mid junction
-  midJoin: '╪', // mid column separator
-  midRight: '╣', // right mid junction
-  botJoin: '╧', // bottom column separator
-
-  // Lines
-  horizontal: '═', // horizontal border
-  vertical: '║', // outer vertical border
-  separator: '│', // inner column separator
+  border: '\x1b[35m', // magenta
+  title: '\x1b[1;33m', // bold yellow
+  label: '\x1b[3;36m', // italic cyan
 };
